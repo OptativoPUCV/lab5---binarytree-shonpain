@@ -5,7 +5,6 @@
 
 typedef struct TreeNode TreeNode;
 
-
 struct TreeNode {
     Pair* pair;
     TreeNode * left;
@@ -196,5 +195,5 @@ Pair * firstTreeMap(TreeMap * tree) {
 }
 
 Pair * nextTreeMap(TreeMap * tree) {
-    return NULL;
+    if (tree == NULL || tree->current == NULL)return NULL; 
 }
