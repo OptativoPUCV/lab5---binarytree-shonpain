@@ -480,3 +480,14 @@ Fri 15 Sep 2023 11:25:08 PM UTC:
  tests:  25|1
 total_score: 60/70
 69f892e
+Fri 15 Sep 2023 11:26:08 PM UTC: 
+ treemap.c | 20 ++++----------------
+ 1 file changed, 4 insertions(+), 16 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:182:15: error: unused variable ‘currentNode’ [-Werror=unused-variable]
+  182 |     TreeNode* currentNode = tree->root;
+      |               ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+5ee9985
