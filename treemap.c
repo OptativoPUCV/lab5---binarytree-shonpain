@@ -196,8 +196,12 @@ Pair * upperBound(TreeMap * tree, void* key){
     if (ubNode != NULL) {
         return ubNode->pair;  
     } else {
-        return NULL; 
+        TreeNode* minRight = minimum(tree->root->right);
+        if (minRight != NULL) {
+            return minRight->pair;
+        }
     }
+    return NULL;
 }
 
 Pair * firstTreeMap(TreeMap * tree) {
