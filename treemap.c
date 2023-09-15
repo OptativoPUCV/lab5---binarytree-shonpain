@@ -62,10 +62,13 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
         else if (aux < 0) {
             parent = current;
             current = current->left; 
-        } else {
+        }
+        else {
             parent = current;
             current = current->right;
+        }
     }
+
         
     TreeNode* newNode = createTreeNode(key, value);
     if (newNode == NULL)return; 
