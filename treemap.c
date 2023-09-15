@@ -181,9 +181,20 @@ Pair * upperBound(TreeMap * tree, void* key){
 
     TreeNode* currentNode = tree->root;
     TreeNode* ubNode = NULL;  
+    while (currentNode != NULL){
+        int comparar = tree->lower_than(key, currentNode->pair->key);
 
-
-
+        if(is_equal(tree, current->pair->key, key)){
+            return;
+        }
+        else ubNode = currentNode;  
+            
+        if (comparar == 0) {
+            currentNode = currentNode->left;  // Buscar en el subárbol derecho
+        } else {
+            return currentNode->right;
+        }
+    }
     
     if (ubNode != NULL) {
         return ubNode->pair;  
