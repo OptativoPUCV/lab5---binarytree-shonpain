@@ -174,8 +174,6 @@ Pair * searchTreeMap(TreeMap * tree, void* key) {
     return NULL;
 }
 
-
-
 Pair * upperBound(TreeMap * tree, void* key){
     if (tree == NULL || tree->root == NULL)return NULL; 
 
@@ -187,10 +185,9 @@ Pair * upperBound(TreeMap * tree, void* key){
             ubNode = currentNode;
             currentNode= currentNode->left;
         }
-        else currentNode = currentNode->right;
-        
-        if (ubNode != NULL)return ubNode->pair;  
+        else currentNode = currentNode->right;    
     }
+    if (ubNode != NULL)return ubNode->pair;  
     return NULL; 
 }
 
