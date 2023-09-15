@@ -48,7 +48,39 @@ TreeMap * createTreeMap(int (*lower_than) (void* key1, void* key2)) {
 }
 
 
-void insertTreeMap(TreeMap * tree, void* key, void * value) {
+void insertTreeMap(TreeMap * tree, void* key, void * value){
+    if(tree == NULL)return;
+    
+    TreeNode* current = tree->root;
+    TreeNode* parent = NULL; 
+
+    while(current != NULL){
+        int aux = tree->lower_than(key, current->pair->key);
+
+        if( aux == 0)return; //la clave ya existe
+    
+        if (comp < 0) {
+            parent = current;
+            current = current->left; 
+        } else {
+            parent = current;
+            current = current->right;
+    }
+        
+    TreeNode* newNode = createTreeNode(key, value);
+    if (newNode == NULL)return; 
+
+    if (parentNode == NULL)tree->root = newNode;
+    else {
+        if (aux < 0) {
+            parentNode->left = newNode;
+        } else {
+            parentNode->right = newNode;
+        }
+        newNode->parent = parentNode;
+    }
+
+    tree->current = newNode;
 
 }
 
