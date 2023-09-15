@@ -517,3 +517,14 @@ treemap.c:186:15: error: unused variable ‘currentNode’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 1ba93d5
+Fri 15 Sep 2023 11:32:40 PM UTC: 
+ treemap.c | 14 +++++---------
+ 1 file changed, 5 insertions(+), 9 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘upperBound’:
+treemap.c:182:15: error: unused variable ‘currentNode’ [-Werror=unused-variable]
+  182 |     TreeNode* currentNode = tree->root;
+      |               ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+2e32fee
