@@ -56,7 +56,9 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
     while(current != NULL){
         int aux = tree->lower_than(key, current->pair->key);
 
-        if( aux == 0)return; //la clave ya existe
+        if( aux == 0){
+            return; //la clave ya existe
+        }
         else if (aux < 0) {
             parent = current;
             current = current->left; 
