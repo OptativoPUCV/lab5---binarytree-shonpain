@@ -491,3 +491,29 @@ treemap.c:182:15: error: unused variable ‘currentNode’ [-Werror=unused-varia
 cc1: all warnings being treated as errors
 Compilation failed
 5ee9985
+Fri 15 Sep 2023 11:32:29 PM UTC: 
+ treemap.c | 14 +++++++++-----
+ 1 file changed, 9 insertions(+), 5 deletions(-)
+In file included from test.c:4:
+treemap.c: In function ‘insertTreeMap’:
+treemap.c:57:11: error: ‘currentNode’ undeclared (first use in this function); did you mean ‘current’?
+   57 |    while (currentNode != NULL) {
+      |           ^~~~~~~~~~~
+      |           current
+treemap.c:57:11: note: each undeclared identifier is reported only once for each function it appears in
+treemap.c:63:14: error: ‘ubNode’ undeclared (first use in this function)
+   63 |         else ubNode = currentNode;
+      |              ^~~~~~
+treemap.c:68:20: error: ‘return’ with a value, in function returning void [-Werror=return-type]
+   68 |             return currentNode->right;
+      |                    ^~~~~~~~~~~
+treemap.c:50:6: note: declared here
+   50 | void insertTreeMap(TreeMap * tree, void* key, void * value){
+      |      ^~~~~~~~~~~~~
+treemap.c: In function ‘upperBound’:
+treemap.c:186:15: error: unused variable ‘currentNode’ [-Werror=unused-variable]
+  186 |     TreeNode* currentNode = tree->root;
+      |               ^~~~~~~~~~~
+cc1: all warnings being treated as errors
+Compilation failed
+1ba93d5
