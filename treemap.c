@@ -190,9 +190,9 @@ Pair * upperBound(TreeMap * tree, void* key){
         else ubNode = currentNode;  
             
         if (comparar == 0) {
-            currentNode = currentNode->left;  // Buscar en el subárbol derecho
+            currentNode = currentNode->left;
         } else {
-            return currentNode->right;
+            currentNode = currentNode->right;
         }
     }
     
