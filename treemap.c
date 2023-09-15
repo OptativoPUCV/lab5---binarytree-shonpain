@@ -59,7 +59,7 @@ void insertTreeMap(TreeMap * tree, void* key, void * value){
 
         if( aux == 0)return; //la clave ya existe
     
-        if (comp < 0) {
+        if (aux < 0) {
             parent = current;
             current = current->left; 
         } else {
